@@ -31,6 +31,8 @@ public class ATHENAClient {
         String[] data = path.split("/ATHENAClient.class");
         path = data[0];
         //String[] cmdArray = new String[]{"cmd.exe", "/C", "\"start; cd " + path + "\"" };
+        
+        // rename ATHENA-DMPO as lib.  Leave source and lib in the same directory where ATHENAClient.jar is. 
         String[] cmdArray = new String[]{"cmd.exe", "/C", "\"start; java -jar lib\\ATHENA-DMPO.jar \"" };
         System.out.println(Arrays.toString(cmdArray));
         rt.exec(cmdArray);
